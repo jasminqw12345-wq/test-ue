@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Dangers of AI</title>
+<style>
+  :root {
+    --bg: #0f1115;
+    --panel: #181b22;
+    --text: #e8e6e3;
+    --muted: #9aa0aa;
+    --accent: #e25d4f;
+    --accent2: #f0a846;
+    --border: #2a2e38;
+  }
+  @media (prefers-color-scheme: light) {
+    :root {
+      --bg: #faf8f5;
+      --panel: #ffffff;
+      --text: #0048ff;
+      --muted: #5c6370;
+      --accent: #ff3900;
+      --accent2: #b87512;
+      --border: #e3dfd8;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: Georgia, "Times New Roman", serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+  }
+  header {
+    padding: 72px 24px 48px;
+    text-align: center;
+    border-bottom: 1px solid var(--border);
+  }
+  header .kicker {
+    font-family: system-ui, sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    font-size: 12px;
+    color: var(--accent);
+  }
+  header h1 {
+    font-size: clamp(2.2rem, 5vw, 3.6rem);
+    margin: 12px 0 16px;
+    line-height: 1.15;
+  }
+  header p {
+    max-width: 640px;
+    margin: 0 auto;
+    color: var(--muted);
+    font-size: 1.15rem;
+  }
+  main {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 48px 24px 96px;
+  }
+  section { margin-bottom: 56px; }
+  h2 {
+    font-size: 1.7rem;
+    margin: 0 0 12px;
+  }
+  h2 .num {
+    color: var(--accent);
+    font-family: system-ui, sans-serif;
+    font-size: 0.9rem;
+    display: block;
+    letter-spacing: 0.1em;
+    margin-bottom: 4px;
+  }
+  p { margin: 0 0 16px; }
+  .callout {
+    background: var(--panel);
+    border-left: 4px solid var(--accent);
+    padding: 18px 22px;
+    border-radius: 6px;
+    margin: 24px 0;
+  }
+  .callout strong { color: var(--accent2); }
+  ul { padding-left: 22px; }
+  li { margin-bottom: 8px; }
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 16px;
+    margin: 24px 0;
+  }
+  .card {
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 20px;
+  }
+  .card h3 {
+    margin: 0 0 8px;
+    font-size: 1.1rem;
+    color: var(--accent2);
+  }
+  .card p { font-size: 0.97rem; margin: 0; color: var(--muted); }
+  .steps {
+    counter-reset: step;
+    list-style: none;
+    padding: 0;
+  }
+  .steps li {
+    counter-increment: step;
+    position: relative;
+    padding-left: 44px;
+    margin-bottom: 14px;
+  }
+  .steps li::before {
+    content: counter(step);
+    position: absolute;
+    left: 0; top: 0;
+    width: 30px; height: 30px;
+    border-radius: 50%;
+    background: var(--accent);
+    color: #fff;
+    font-family: system-ui, sans-serif;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.9rem;
+  }
+  footer {
+    border-top: 1px solid var(--border);
+    padding: 24px;
+    text-align: center;
+    color: var(--muted);
+    font-family: system-ui, sans-serif;
+    font-size: 0.85rem;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="kicker">An overview</div>
+  <h1>The Dangers of AI with Valeriya</h1>
+  <p>Artificial intelligence offers real benefits, but its risks range from everyday harms to long-term questions about control. This page outlines the main concerns and what is being done about them.</p>
+</header>
+
+<main>
+
+  <section>
+    <h2><span class="num">01</span>Misinformation and manipulation</h2>
+    <a href="/subfolder-test/"></a>
+    <p>AI systems can generate convincing text, images, audio and video at very low cost. That makes it easier to produce fake news, impersonate real people, and flood public discussion with content that is hard to verify. Deepfakes of politicians, executives or family members can be used for fraud, harassment or election interference.</p>
+    <div class="callout">
+      <strong>Why it matters:</strong> when anything can be faked, people may stop trusting real evidence, which damages journalism, courts and democratic debate.
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="num">02</span>Bias and unfair decisions</h2>
+    <p>AI models learn from historical data, and that data often reflects existing inequalities. When such systems help decide who gets a loan, a job interview, a medical referral or a bail recommendation, they can repeat and even amplify discrimination, often without anyone noticing because the decision looks technical and objective.</p>
+  </section>
+
+  <section>
+    <h2><span class="num">03</span>Privacy and surveillance</h2>
+    <p>Training and running AI systems can involve huge amounts of personal data. Facial recognition, behavioural tracking and inference of sensitive traits from ordinary information raise the prospect of mass surveillance, both by governments and by companies, and make it harder for individuals to control what is known about them.</p>
+  </section>
+
+  <section>
+    <h2><span class="num">04</span>Security and misuse</h2>
+    <p>AI can lower the skill needed for cyberattacks, scams and the design of harmful materials. Automated phishing that adapts to its target, malware that changes itself to evade detection, and tools that help people with bad intentions are all active concerns for security researchers and policymakers.</p>
+  </section>
+
+  <section>
+    <h2><span class="num">05</span>Jobs and economic disruption</h2>
+    <p>Many tasks in writing, translation, customer service, design and programming can now be partly automated. The benefits may be large overall, but the gains are likely to concentrate among those who own the technology, while workers in exposed roles face insecurity, lower wages or the need to retrain, and societies may struggle to share the gains fairly.</p>
+  </section>
+
+  <section>
+    <h2><span class="num">06</span>Over-reliance and deskilling</h2>
+    <p>When people hand over judgement, writing or problem-solving to AI, they may gradually lose the skills they no longer practise. Errors can also go unchecked when users assume a fluent answer is a correct one, since AI systems can state false information with complete confidence.</p>
+  </section>
+
+  <section>
+    <h2><span class="num">07</span>Concentration of power</h2>
+    <p>Training the most capable models requires vast computing power, data and money. Only a handful of companies and countries can currently build them, which gives those few actors outsized influence over information, markets and public policy.</p>
+  </section>
+
+  <section>
+    <h2><span class="num">08</span>Loss of control and misaligned goals</h2>
+    <p>The most serious long-term worry is that highly capable systems might pursue goals that differ from what their designers intended, or resist being corrected or shut down. Researchers disagree about how likely this is and how soon it could matter, but many argue that alignment and safety work should progress before systems become far more powerful.</p>
+    <div class="callout">
+      <strong>A note on uncertainty:</strong> experts hold a wide range of views on AI risk. Some consider the long-term dangers overstated; others consider them among the most important issues of this century. Reasonable people weigh these differently.
+    </div>
+  </section>
+
+  <section>
+    <h2>Summary of risks</h2>
+    <div class="grid">
+      <div class="card"><h3>Near-term</h3><p>Misinformation, bias, privacy loss, fraud and job displacement are already happening.</p></div>
+      <div class="card"><h3>Structural</h3><p>Power concentration and weakened democratic institutions could become entrenched.</p></div>
+      <div class="card"><h3>Long-term</h3><p>Misaligned or uncontrollable advanced systems remain a debated but serious possibility.</p></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>What can be done</h2>
+    <ol class="steps">
+      <li><strong>Regulate high-risk uses.</strong> Apply stricter rules to areas such as healthcare, policing, hiring and critical infrastructure.</li>
+      <li><strong>Require transparency.</strong> Label AI-generated content and disclose how systems are tested and evaluated.</li>
+      <li><strong>Invest in safety research.</strong> Fund work on alignment, interpretability and robustness before capabilities outpace them.</li>
+      <li><strong>Protect data and rights.</strong> Limit invasive collection and give people meaningful control over their information.</li>
+      <li><strong>Prepare the workforce.</strong> Support retraining, education and social safety nets during the transition.</li>
+      <li><strong>Keep humans accountable.</strong> Make sure someone is responsible for decisions made with AI, and that people can contest them.</li>
+    </ol>
+  </section>
+
+</main>
+
+<footer>
+  This page is a general overview for discussion and is not exhaustive.
+</footer>
+
+</body>
+</html>
